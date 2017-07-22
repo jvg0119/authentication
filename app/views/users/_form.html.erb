@@ -1,0 +1,30 @@
+
+<div class="row">
+  <div class="col-md-6">
+
+    <%= form_group_tag(@user.errors[:name]) do %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control", placeholder: "Enter name", autofocus: true %>
+    <% end %>
+
+    <%= form_group_tag(@user.errors[:email]) do %>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+    <% end %>
+
+    <%= form_group_tag(@user.errors[:password]) do %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
+    <% end %>
+
+    <%= form_group_tag(@user.errors[:password_confirmation]) do %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Enter password" %>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.submit "Save", class: "btn btn-success" %>
+    </div>
+
+  </div>
+</div>

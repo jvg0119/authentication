@@ -1,0 +1,11 @@
+
+<h2>Sign Up Confirmation</h2>
+<h4>Are you sure these values are correct?</h4>
+
+<h4>
+  Email: <%= @user.email %><br>
+  Name: <%= @user.name %>
+</h4>
+
+<%= button_to "Yes", { controller: "users", action: "create", params: params.permit! }, class: "btn btn-success" %>
+<%= button_to "No", { controller: "users", action: "new", params: params.permit! }, method: :get, class: "btn btn-danger confirmation-button-red" %>

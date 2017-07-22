@@ -1,0 +1,9 @@
+<h1>New User</h1>
+
+<%= form_for @user, url: { action: :confirm } do |f| %>
+
+  <%= render partial: 'shared/error_message', locals: { object: @user } %>
+
+  <%= render partial: 'form', locals: { f: f } %>
+
+<% end %>

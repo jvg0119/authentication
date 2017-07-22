@@ -1,0 +1,10 @@
+
+<h1>Edit User</h1>
+
+<%= form_for @user, url: { action: :update } do |f| %>
+
+  <%= render partial: 'shared/error_message', locals: { object: @user } %>
+
+  <%= render partial: 'form', locals: { f: f } %>
+
+<% end %>
